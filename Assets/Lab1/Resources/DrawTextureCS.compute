@@ -1,0 +1,18 @@
+#include <UnityCG.cginc>
+
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> render_texture;
+int array_len;
+
+[numthreads(1024,1,1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+    int i = id.x;
+    if (!(i < array_len))return;
+    float x = i * 0.1;
+    render_texture[id.xy] = float4(x, sin(x - _Time.y), cos(x - _Time.y), 1);
+}

@@ -1,0 +1,696 @@
+Using pre-set license
+Built from '2020.3/china_unity/release' branch; Version is '2020.3.12f1c1 (5887f62ce680) revision 5801974'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19043.1110; Version 2009; 64bit' Language: 'zh' Physical Memory: 16097 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2020.3.12f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/yangchenghua/Documents/GitHub/VFX_CS_JOBS_LAB
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+65104
+Successfully changed project path to: C:/Users/yangchenghua/Documents/GitHub/VFX_CS_JOBS_LAB
+C:/Users/yangchenghua/Documents/GitHub/VFX_CS_JOBS_LAB
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 51.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1c1 (5887f62ce680)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.12f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/yangchenghua/Documents/GitHub/VFX_CS_JOBS_LAB/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
+    Vendor:   
+    VRAM:     8031 MB
+    Driver:   30.0.14.7168
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2020.3.12f1c1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2020.3.12f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity 2020.3.12f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2020.3.12f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004149 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.983 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.008077 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.15 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.068 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3216 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.1 MB.
+System memory in use after: 138.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3649.
+Total: 2.190400 ms (FindLiveObjects: 0.307800 ms CreateObjectMapping: 0.147600 ms MarkObjects: 1.674700 ms  DeleteObjects: 0.059400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f980a0864b8ba45aa39672ba9c6ea45') in 0.025027 seconds 
+  Import took 0.028921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.132945 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcb731002b0be7171b379707a72c9b93') in 0.043863 seconds 
+  Import took 0.052574 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.493901 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2af5fac487c6351ea6b873e253787b68') in 0.003470 seconds 
+  Import took 0.007406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.078701 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1dd40f0dab3c15e21c41c413f684661') in 0.004417 seconds 
+  Import took 0.008618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.919571 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e88918d1d28cd44329fbbe3f3a9b6af') in 0.004169 seconds 
+  Import took 0.011524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.419141 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd911d0da6f2f184a3e4339c8e7ab27bd') in 0.004106 seconds 
+  Import took 0.007898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.437161 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc7c9a329ccb084a4f460adcd2f6c06') in 0.004282 seconds 
+  Import took 0.007909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.511653 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f89263de0120bc0aea8d4edda00175e') in 0.004100 seconds 
+  Import took 0.008049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.292967 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b30d77d8b917c6ff5e32af5d126758df') in 0.004728 seconds 
+  Import took 0.008798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.648833 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ca495a0019bda59e8af7cfad24dd45f') in 0.004626 seconds 
+  Import took 0.009552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.024361 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16620cc1e62ebe998933421234f2abb0') in 0.004704 seconds 
+  Import took 0.008886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.569396 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ea9d6f4780927c587f497110ac3f9a7') in 0.004709 seconds 
+  Import took 0.008486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.848146 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d2c9525d07fe91157db2f48d6c0f3d6') in 0.004991 seconds 
+  Import took 0.009333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.918764 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea2b40244b6fe2165655a33e96a22dd') in 0.004280 seconds 
+  Import took 0.008992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.226990 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac42ac9ac9d20a7fbbeeab4576ea965') in 0.005440 seconds 
+  Import took 0.009974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 457.906752 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f8d8762d622766d477166f4166fde00') in 0.005287 seconds 
+  Import took 0.010473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 218.592263 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c9fa2b198c228f3233fb68a0402605') in 0.004948 seconds 
+  Import took 0.009981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.700072 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a18ba55545d005a94383b97af411f3') in 0.004970 seconds 
+  Import took 0.009178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.083099 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdfca9d1a168257583a6fd16a70cbc5d') in 0.004676 seconds 
+  Import took 0.008773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.681594 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ffb1931790bda6582d505a52f068281') in 0.004667 seconds 
+  Import took 0.008929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.844432 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad886f2034586a5177897052f1e3fa1b') in 0.004820 seconds 
+  Import took 0.009033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.498866 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fc78409f7c1b2144f9c6dcbcb51ad38') in 0.004605 seconds 
+  Import took 0.008738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.651121 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19904f7eb3f14d647cd221bb61870605') in 0.005095 seconds 
+  Import took 0.009564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.960572 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9684a5b10350e8d48f96f921ad1a00f9') in 0.004500 seconds 
+  Import took 0.008749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.210273 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56a5212d5a5e1a1f3f06f4005eb7d7fb') in 0.005801 seconds 
+  Import took 0.009896 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.103375 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3174a98e926089a9cfbac30e46d0926c') in 0.004830 seconds 
+  Import took 0.009142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.863451 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf204601189036ae26f13624413b5a88') in 0.004638 seconds 
+  Import took 0.008853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.794128 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61d6da8287ec9eafd98a4a3a7502e400') in 0.004877 seconds 
+  Import took 0.009012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.654594 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b7c90789e916486254916ac1afcdd75') in 0.004656 seconds 
+  Import took 0.008776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.247702 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a581c8d2cb2ef2347de64c48c950d8a') in 0.004707 seconds 
+  Import took 0.008938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.640493 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb19b381451df7139eeabaab24296e9b') in 0.004521 seconds 
+  Import took 0.008891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 98.773881 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a1a2ae3971f3173765dbfcdb78efec6') in 0.003615 seconds 
+  Import took 0.007741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.401793 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba015f56eef99dd547cdfe17015fe96b') in 0.004332 seconds 
+  Import took 0.008932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.237173 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a315715b55a01964d4cda2c0bda4d0bd') in 0.004237 seconds 
+  Import took 0.008554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.355171 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df570bdd2c314dd7e2bf2f73acc2d114') in 0.004455 seconds 
+  Import took 0.008993 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.652016 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ce4f00a7b8a0c5b35dc05986897c50') in 0.004189 seconds 
+  Import took 0.008332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.116135 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2427ba25582e5a393e9135c1af38267') in 0.004222 seconds 
+  Import took 0.008229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.460673 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b6d82ca94baf9b1383f9bc105241321') in 0.004525 seconds 
+  Import took 0.008776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.658143 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f61ec21391ec123eefd986793d5130d2') in 0.004138 seconds 
+  Import took 0.008147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 111.512006 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faf08291fac22ab9fe098a93f583d852') in 0.004516 seconds 
+  Import took 0.009261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.720775 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d7c86c67ac1995533cb07f667d324c') in 0.004805 seconds 
+  Import took 0.009779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.676294 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d297947bee9f8106238fb70994dd3e7') in 0.004417 seconds 
+  Import took 0.008931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 594.836047 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51a238e9a3a85acda08fb9206179d71a') in 0.004753 seconds 
+  Import took 0.009628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.423078 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb66051001feb329fd10bfde1b43de33') in 0.004094 seconds 
+  Import took 0.010463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.542247 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8424272441b43a2feef68d866d8af247') in 0.003486 seconds 
+  Import took 0.009822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 403.611323 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aeed0ad57589ccf4572f8ce8b5ac0b0') in 0.004538 seconds 
+  Import took 0.009586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.085376 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e657df8a714200041179124455624784') in 0.004186 seconds 
+  Import took 0.008561 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.703027 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b353b175f65543e297fad4ef61655d10') in 0.004366 seconds 
+  Import took 0.008587 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.557823 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f996394e2f0759f5a2595a51afeeaf59') in 0.004115 seconds 
+  Import took 0.008473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.274834 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e62786568686de1c669d790e668f4e2d') in 0.004444 seconds 
+  Import took 0.009338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.757230 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ec2eed1956a0af16d92991f844c4d82') in 0.004252 seconds 
+  Import took 0.008755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.452146 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e95df38a0930dfe1847da46058cab1') in 0.004269 seconds 
+  Import took 0.008438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.772170 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b08675df89dd31bd59ae48c750d03d1d') in 0.004220 seconds 
+  Import took 0.008383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.156034 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2728e7783e993e76285bc94729882e2') in 0.005065 seconds 
+  Import took 0.009592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.470950 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bc7a48d1d6ec965747163e9a2769cc5') in 0.004396 seconds 
+  Import took 0.008490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.975544 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eadc296841512ddf4edb54807aad0d5') in 0.004370 seconds 
+  Import took 0.008518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.083517 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845ece44e45ae2a9f4840a018e145f35') in 0.004357 seconds 
+  Import took 0.008442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.315888 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cb19640656e1b011f0e58c5c0d5ab5a') in 0.004392 seconds 
+  Import took 0.010592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.518360 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7a9f9b4ed301f2ee199cd9b53f9ec1d') in 0.004251 seconds 
+  Import took 0.008285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.897175 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bac070ed0efa9936ae03519f1163b54') in 0.004434 seconds 
+  Import took 0.008754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.833358 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380eaa01e6af0f97957756ebda17bad7') in 0.004465 seconds 
+  Import took 0.008812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.039917 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7892ab8fc5385edc85d38fdf108070e7') in 0.004232 seconds 
+  Import took 0.008405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.700160 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bdf879517ee484308f78b4dbda15981') in 0.004652 seconds 
+  Import took 0.009219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.993491 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '910d63111ca146d03066ab5fbe0b504f') in 0.004371 seconds 
+  Import took 0.008500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.358098 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a65f071a5530526a005717d16feec42') in 0.004356 seconds 
+  Import took 0.008491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.867260 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '705cbbaec25b6ab742937fcff4221f95') in 0.004510 seconds 
+  Import took 0.008766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.704208 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61f21f7e428a0ddcb5a2693f30a24510') in 0.004416 seconds 
+  Import took 0.008570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 153.611611 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f8be1ebf47116ca2e615ba2ce1f7b2b') in 0.004620 seconds 
+  Import took 0.009265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.086429 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '566987a35369f173fe49c0f578c1b224') in 0.004543 seconds 
+  Import took 0.008927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.340725 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2b3cbaa3244f063ee84c93884c1852') in 0.004449 seconds 
+  Import took 0.008838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.144556 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2026486d740e846d5e1c14020257126e') in 0.004953 seconds 
+  Import took 0.009427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.383680 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91daf64d77944c09c046ef71f26fc5bf') in 0.004230 seconds 
+  Import took 0.008619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.301369 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48a6764fd8d1ddf9d2ae6ce36e0a15b4') in 0.003984 seconds 
+  Import took 0.008180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.601509 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '508356062e3337972225f0d0a593bf96') in 0.004224 seconds 
+  Import took 0.008296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.877871 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b97e49fc63a072a349cff2f12be627c4') in 0.004258 seconds 
+  Import took 0.008358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.841728 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c992f99d49e034c179135abd6a5cc25') in 0.005023 seconds 
+  Import took 0.009175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 88.884223 seconds.
+  path: Assets/Lab1/New Graph11.vfx
+  artifactKey: Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph11.vfx using Guid(acf6fd25e7effdb44af23bb629a501a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a29e5344637920a8e516cdcf72aa7f03') in 0.005833 seconds 
+  Import took 0.011065 seconds .
+
