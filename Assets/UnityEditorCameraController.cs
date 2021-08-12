@@ -14,7 +14,7 @@ public class UnityEditorCameraController : MonoBehaviour
 
     [Tooltip("RMB Rotate")][Range(1, 100)]
     public int RotateSensitive;
-    float rotate_sensitive => RotateSensitive ;
+    float rotate_sensitive => RotateSensitive;
 
     [Tooltip("Flip the y axis rotation of input")]
     public bool y_flip;
@@ -95,8 +95,10 @@ public class UnityEditorCameraController : MonoBehaviour
         var e = target_t.rotation.eulerAngles;
         target_t.rotation = Quaternion.Euler(e + new Vector3(-user_input.rotate.y, user_input.rotate.x, 0));
 
-        t.position = Vector3.Lerp(t.position, target_t.position, 0.5f);
-        t.rotation = Quaternion.Lerp(t.rotation, target_t.rotation, 0.5f);
+        target_t.Translate(Time.deltaTime * new Vector3(-user_input.drag.x, -user_input.drag.y, 0), target_t);
+
+        t.position = Vector3.Lerp(t.position, target_t.position, 0.3f);
+        t.rotation = Quaternion.Lerp(t.rotation, target_t.rotation, 0.3f);
     }
 
 #endregion

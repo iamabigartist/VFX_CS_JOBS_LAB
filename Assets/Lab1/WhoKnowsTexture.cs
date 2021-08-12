@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.VFX;
+
+[ExecuteAlways]
 public class WhoKnowsTexture : MonoBehaviour
 {
 
