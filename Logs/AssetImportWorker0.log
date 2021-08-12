@@ -241,3 +241,28 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1656.084054 seconds.
+  path: Assets/Lab1/New Graph.vfx
+  artifactKey: Guid(0d590d02333fd5e4a948731ee79f9d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph.vfx using Guid(0d590d02333fd5e4a948731ee79f9d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11a09a390f2328def7039506aefdaf65') in 0.105420 seconds 
+  Import took 0.111805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2733.105118 seconds.
+  path: Assets/Lab1/New Graph.vfx
+  artifactKey: Guid(0d590d02333fd5e4a948731ee79f9d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph.vfx using Guid(0d590d02333fd5e4a948731ee79f9d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e4d74f57361138de5c4e5495d4438e') in 0.003976 seconds 
+  Import took 0.011136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.970271 seconds.
+  path: Assets/Lab1/New Graph.vfx
+  artifactKey: Guid(0d590d02333fd5e4a948731ee79f9d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lab1/New Graph.vfx using Guid(0d590d02333fd5e4a948731ee79f9d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf59cbca8d24f563d41488025df0fb7d') in 0.004955 seconds 
+  Import took 0.010341 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
