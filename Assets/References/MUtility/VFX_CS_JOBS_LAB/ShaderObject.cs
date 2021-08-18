@@ -1,25 +1,39 @@
 using UnityEngine;
 using UnityEngine.VFX;
-interface IShaderInitable
+// ReSharper disable UnusedMemberInSuper.Global
+interface IShaderBehave<in TSource>
 {
-    public void init_shader();
+    public void init_shader(TSource s);
     public void init_id();
-    public void bind_id();
+    public void bind(ShaderArgs args);
 }
 
-public abstract class VFXGraphObject : IShaderInitable
+public abstract class ShaderArgs
 {
-    VisualEffect _this;
-    public abstract void init_shader();
+}
+public abstract class VFXGraphObject<TSource> : IShaderBehave<TSource>
+{
+    protected VisualEffect _this;
+    public abstract void init_shader(TSource s);
     public abstract void init_id();
-    public abstract void bind_id();
+    public abstract void bind(ShaderArgs args);
 }
 
-public abstract class ComputeShaderObject : IShaderInitable
+public abstract class ComputeShaderObject<TSource> : IShaderBehave<TSource>
 {
-    ComputeShader _this;
-    readonly Vector3[] num_threads_array;
-    Vector3[] data_count_array;
+    protected ComputeShader _this;
+    protected readonly Vector3[] num_threads_array;
+    protected Vector3[] data_count_array;
+
+    public abstract void init_shader(TSource s);
+    public abstract void init_id();
+    public abstract void bind(ShaderArgs args);
+
+    protected ComputeShaderObject(Vector3[] num_threads_array)
+    {
+        this.num_threads_array = num_threads_array;
+    }
+
     Vector3Int thread_group_size(int kernel)
     {
         var num_thread = num_threads_array[kernel];
@@ -34,7 +48,5 @@ public abstract class ComputeShaderObject : IShaderInitable
         var cur_thread_group_size = thread_group_size( kernel );
         _this.Dispatch( kernel, cur_thread_group_size.x, cur_thread_group_size.y, cur_thread_group_size.z );
     }
-    public abstract void init_shader();
-    public abstract void init_id();
-    public abstract void bind_id();
+
 }
