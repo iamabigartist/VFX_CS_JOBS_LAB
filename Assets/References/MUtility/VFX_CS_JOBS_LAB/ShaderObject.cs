@@ -11,6 +11,7 @@ interface IShaderBehave<in TSource>
 public abstract class ShaderArgs
 {
 }
+
 public abstract class VFXGraphObject<TSource> : IShaderBehave<TSource>
 {
     protected VisualEffect _this;
