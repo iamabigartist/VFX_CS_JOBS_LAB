@@ -390,6 +390,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1880908477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4005ead648ca02499f1a407f0628460, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fbb0edb79a474645a1f3acd18f293e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Count: 1000
+  DistantScale: 1
+  RotateScale: 0.1

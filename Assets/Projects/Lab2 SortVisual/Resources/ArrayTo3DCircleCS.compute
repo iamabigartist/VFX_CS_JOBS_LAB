@@ -5,7 +5,7 @@ float3 origin;
 float rotate_scale;
 float distant_scale;
 int array_len;
-RWStructuredBuffer<int> sorted_array;
+StructuredBuffer<int> sorted_array;
 RWTexture1D<float4> render_texture;
 
 void Unity_RotateAboutAxis_Radians_float(float3 In, float3 Axis, float Rotation, out float3 Out)

@@ -4,19 +4,18 @@ namespace VFX_CS_JOBS_LAB
     /// <summary>
     ///     Use an array as a input to the compute_shader and output a render_texture to be rendered by the visual_effect.
     /// </summary>
-    public class Array_CS_VFX_Player<TVFXGraph, TVFXGraphSource, TComputeShader, TComputeShaderSource>
-        where TVFXGraph : VFXGraphObject<TVFXGraphSource>
-        where TComputeShader : ComputeShaderObject<TComputeShaderSource>
+    public class Array_CS_VFX_Player<TVFXGraphArgs, TComputeShaderArgs>
     {
         public RenderTexture RenderTexture { get; }
-        public TVFXGraph VFXGraph { get; }
-        public TComputeShader ComputeShader { get; }
+
+        public VFXGraphObject<TVFXGraphArgs> VFXGraph { get; }
+
+        public ComputeShaderObject<TComputeShaderArgs> ComputeShader { get; }
+
         public Array_CS_VFX_Player(
             int array_len,
-            TVFXGraph VFXGraph,
-            ShaderArgs VFXArgs,
-            TComputeShader ComputeShader,
-            ShaderArgs ComputeArgs)
+            VFXGraphObject<TVFXGraphArgs> vfxg,
+            ComputeShaderObject<TComputeShaderArgs> cs)
         {
             RenderTexture = new RenderTexture(
                 array_len, 1, 0,
@@ -25,23 +24,21 @@ namespace VFX_CS_JOBS_LAB
             {
                 enableRandomWrite = true
             };
-            this.VFXGraph = VFXGraph;
-            this.VFXGraph.init_id();
-            this.VFXGraph.bind( VFXArgs );
-            this.ComputeShader = ComputeShader;
-            this.ComputeShader.init_id();
-            this.ComputeShader.bind( ComputeArgs );
+            VFXGraph = vfxg;
+            VFXGraph.init_id();
+            ComputeShader = cs;
+            ComputeShader.init_id();
+        }
+
+        public void Config(TVFXGraphArgs VFXArgs, TComputeShaderArgs ComputeArgs)
+        {
+            VFXGraph.bind( VFXArgs );
+            ComputeShader.bind( ComputeArgs );
         }
 
         public void Refresh()
         {
             ComputeShader.Dispatch( 0 );
-        }
-
-        public void Config(ShaderArgs VFXArgs, ShaderArgs ComputeArgs)
-        {
-            VFXGraph.bind( VFXArgs );
-            ComputeShader.bind( ComputeArgs );
         }
     }
 }

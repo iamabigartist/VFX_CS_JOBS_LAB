@@ -1,34 +1,27 @@
 using UnityEngine;
 using UnityEngine.VFX;
 // ReSharper disable UnusedMemberInSuper.Global
-interface IShaderBehave<in TSource>
+interface IShaderBehave<in TShaderArgs>
 {
-    public void init_shader(TSource s);
     public void init_id();
-    public void bind(ShaderArgs args);
+    public void bind(TShaderArgs args);
 }
 
-public abstract class ShaderArgs
-{
-}
-
-public abstract class VFXGraphObject<TSource> : IShaderBehave<TSource>
+public abstract class VFXGraphObject<TShaderArgs> : IShaderBehave<TShaderArgs>
 {
     protected VisualEffect _this;
-    public abstract void init_shader(TSource s);
     public abstract void init_id();
-    public abstract void bind(ShaderArgs args);
+    public abstract void bind(TShaderArgs args);
 }
 
-public abstract class ComputeShaderObject<TSource> : IShaderBehave<TSource>
+public abstract class ComputeShaderObject<TShaderArgs> : IShaderBehave<TShaderArgs>
 {
     protected ComputeShader _this;
     protected readonly Vector3[] num_threads_array;
     protected Vector3[] data_count_array;
 
-    public abstract void init_shader(TSource s);
     public abstract void init_id();
-    public abstract void bind(ShaderArgs args);
+    public abstract void bind(TShaderArgs args);
 
     protected ComputeShaderObject(Vector3[] num_threads_array)
     {
