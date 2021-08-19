@@ -7,7 +7,7 @@ namespace Algorithms.Sorting
     {
         public static void BubbleSort<T>(this IList<T> collection, Comparer<T> comparer = null)
         {
-            comparer = comparer ?? Comparer<T>.Default;
+            comparer ??= Comparer<T>.Default;
             collection.BubbleSortAscending(comparer);
         }
 

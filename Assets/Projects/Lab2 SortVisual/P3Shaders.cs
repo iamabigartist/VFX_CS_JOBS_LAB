@@ -14,6 +14,7 @@ namespace VFX_CS_JOBS_LAB
             public Vector3 origin;
             public float rotate_scale;
             public float distant_scale;
+            public float rotate_ratio;
             public int array_len;
             public ComputeBuffer sorted_array;
             public RenderTexture render_texture;
@@ -23,6 +24,7 @@ namespace VFX_CS_JOBS_LAB
             int origin,
             int rotate_scale,
             int distant_scale,
+            int rotate_ratio,
             int array_len,
             int sorted_array,
             int render_texture
@@ -43,6 +45,7 @@ namespace VFX_CS_JOBS_LAB
             ids = (Shader.PropertyToID( "origin" ),
                    Shader.PropertyToID( "rotate_scale" ),
                    Shader.PropertyToID( "distant_scale" ),
+                   Shader.PropertyToID( "rotate_ratio" ),
                    Shader.PropertyToID( "array_len" ),
                    Shader.PropertyToID( "sorted_array" ),
                    Shader.PropertyToID( "render_texture" ));
@@ -54,9 +57,18 @@ namespace VFX_CS_JOBS_LAB
             _this.SetVector( ids.origin, args.origin );
             _this.SetFloat( ids.rotate_scale, args.rotate_scale );
             _this.SetFloat( ids.distant_scale, args.distant_scale );
+            _this.SetFloat( ids.rotate_ratio, args.rotate_ratio );
             _this.SetInt( ids.array_len, args.array_len );
             _this.SetBuffer( 0, ids.sorted_array, args.sorted_array );
             _this.SetTexture( 0, ids.render_texture, args.render_texture );
+        }
+
+        public void bind_refresh(Vector3 origin, float rotate_scale, float distant_scale, float rotate_ratio)
+        {
+            _this.SetVector( ids.origin, origin );
+            _this.SetFloat( ids.rotate_scale, rotate_scale );
+            _this.SetFloat( ids.distant_scale, distant_scale );
+            _this.SetFloat( ids.rotate_ratio, rotate_ratio );
         }
     }
 

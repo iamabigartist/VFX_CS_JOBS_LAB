@@ -1,29 +1,36 @@
+using System.Threading.Tasks;
+using Algorithms.Sorting;
 using UnityEngine;
 using VFX_CS_JOBS_LAB;
-[ExecuteAlways]
 public class VisualisationSystem : MonoBehaviour
 {
+    public RenderTexture[] RenderTextures;
     public int Count;
     public float DistantScale;
     public float RotateScale;
-    int[] array;
+    public float RotateRatio;
+    float[] array;
     ComputeBuffer buffer;
-    Array_CS_VFX_Player
+    Array_CS_VFX_Player<ParticlePlayer, ArrayTo3DCircleCS>
         Player;
 
     // Start is called before the first frame update
     void Start()
     {
-        array = new int[Count];
-        buffer = new ComputeBuffer( Count, sizeof(int) );
+        array = new float[Count];
+        buffer = new ComputeBuffer( Count, sizeof(float) );
         for (int i = 0; i < Count; i++)
         {
-            array[i] = i;
+            array[i] = Random.Range( 0, Count );
         }
+
         buffer.SetData( array );
+
         Player = new
-            Array_CS_VFX_Player( Count,
-                new ParticlePlayer( this ),
+            Array_CS_VFX_Player
+            <ParticlePlayer,
+                ArrayTo3DCircleCS>( Count,
+                new ParticlePlayer( transform.GetChild( 0 ) ),
                 new ArrayTo3DCircleCS( Count ) );
 
         Player.Config(
@@ -47,6 +54,28 @@ public class VisualisationSystem : MonoBehaviour
     void Update()
     {
         buffer.SetData( array );
+        Player.ComputeShader.bind_refresh( transform.position, RotateScale, DistantScale, RotateRatio );
         Player.Refresh();
     }
+
+    void OnDestroy()
+    {
+        buffer.Release();
+    }
+
+    void OnGUI()
+    {
+        if (GUILayout.Button( "BubbleSort" ))
+        {
+            Task.Run( () => { array.BubbleSort(); } );
+        }
+        if (GUILayout.Button( "RandomSort" ))
+        {
+            Task.Run( () => { array.RandomSort( 1000 ); } );
+        }
+    }
+
+
+
+
 }
