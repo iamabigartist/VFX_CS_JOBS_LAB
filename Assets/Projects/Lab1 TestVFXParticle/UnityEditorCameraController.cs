@@ -4,21 +4,21 @@ public class UnityEditorCameraController : MonoBehaviour
 
 #region Config
 
-    [Tooltip("WASD Move")][Range(1, 100)]
-    public int MoveSpeed;
-    float move_speed => MoveSpeed;
+    [Tooltip( "WASD Move" )][Range( 0, 6 )]
+    public float MoveSpeedLog10;
+    float move_speed => Mathf.Pow( 10, MoveSpeedLog10 );
 
-    [Tooltip("MMB Drag")][Range(1, 100)]
-    public int DragScale;
-    float drag_scale => DragScale;
+    [Tooltip( "MMB Drag" )][Range( 0, 6 )]
+    public float DragScaleLog10;
+    float drag_scale => Mathf.Pow( 10, DragScaleLog10 );
 
-    [Tooltip("RMB Rotate")][Range(1, 100)]
-    public int RotateSensitive;
-    float rotate_sensitive => RotateSensitive;
+    [Tooltip( "RMB Rotate" )][Range( 0, 6 )]
+    public float RotateSensitiveLog10;
+    float rotate_sensitive => Mathf.Pow( 10, RotateSensitiveLog10 );
 
-    [Tooltip("Flip the y axis rotation of input")]
+    [Tooltip( "Flip the y axis rotation of input" )]
     public bool y_flip;
-    [Tooltip("Flip the x axis rotation of input")]
+    [Tooltip( "Flip the x axis rotation of input" )]
     public bool x_flip;
 
 #endregion
@@ -32,8 +32,8 @@ public class UnityEditorCameraController : MonoBehaviour
 
 #region Operation
 
-    static Vector2 mouse_move => new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-    static Vector2 wasd_move => new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    static Vector2 mouse_move => new Vector2( Input.GetAxis( "Mouse X" ), Input.GetAxis( "Mouse Y" ) );
+    static Vector2 wasd_move => new Vector2( Input.GetAxis( "Horizontal" ), Input.GetAxis( "Vertical" ) );
 
     enum InputMode
     {
@@ -53,11 +53,11 @@ public class UnityEditorCameraController : MonoBehaviour
     {
         if (user_input.input_mode == InputMode.None)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown( KeyCode.Mouse1 ))
             {
                 user_input.input_mode = InputMode.Rotate;
             }
-            else if (Input.GetKeyDown(KeyCode.Mouse2))
+            else if (Input.GetKeyDown( KeyCode.Mouse2 ))
             {
                 user_input.input_mode = InputMode.Drag;
             }
@@ -65,8 +65,8 @@ public class UnityEditorCameraController : MonoBehaviour
         else
         {
             if (
-                Input.GetKeyUp(KeyCode.Mouse1) && user_input.input_mode == InputMode.Rotate ||
-                Input.GetKeyUp(KeyCode.Mouse2) && user_input.input_mode == InputMode.Drag)
+                Input.GetKeyUp( KeyCode.Mouse1 ) && user_input.input_mode == InputMode.Rotate ||
+                Input.GetKeyUp( KeyCode.Mouse2 ) && user_input.input_mode == InputMode.Drag)
             {
                 user_input.input_mode = InputMode.None;
             }
@@ -84,21 +84,22 @@ public class UnityEditorCameraController : MonoBehaviour
 
         user_input.rotate =
             user_input.input_mode == InputMode.Rotate ?
-                mouse_move * rotate_sensitive
+                mouse_move * rotate_sensitive *
+                new Vector2( x_flip ? -1 : 1, y_flip ? -1 : 1 )
                 : Vector2.zero;
     }
 
     void apply_input()
     {
-        target_t.Translate(Time.deltaTime * new Vector3(user_input.move.x, 0, user_input.move.y), target_t);
+        target_t.Translate( Time.deltaTime * new Vector3( user_input.move.x, 0, user_input.move.y ), target_t );
 
         var e = target_t.rotation.eulerAngles;
-        target_t.rotation = Quaternion.Euler(e + new Vector3(-user_input.rotate.y, user_input.rotate.x, 0));
+        target_t.rotation = Quaternion.Euler( e + new Vector3( -user_input.rotate.y, user_input.rotate.x, 0 ) );
 
-        target_t.Translate(Time.deltaTime * new Vector3(-user_input.drag.x, -user_input.drag.y, 0), target_t);
+        target_t.Translate( Time.deltaTime * new Vector3( -user_input.drag.x, -user_input.drag.y, 0 ), target_t );
 
-        t.position = Vector3.Lerp(t.position, target_t.position, 0.3f);
-        t.rotation = Quaternion.Lerp(t.rotation, target_t.rotation, 0.3f);
+        t.position = Vector3.Lerp( t.position, target_t.position, 0.3f );
+        t.rotation = Quaternion.Lerp( t.rotation, target_t.rotation, 0.3f );
     }
 
 #endregion

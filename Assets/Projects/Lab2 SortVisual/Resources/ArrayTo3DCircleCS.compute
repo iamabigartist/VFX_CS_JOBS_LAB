@@ -6,6 +6,7 @@ float rotate_scale;
 float rotate_ratio;
 float distant_scale;
 int array_len;
+bool type1;
 StructuredBuffer<float> sorted_array;
 RWTexture2D<float4> render_texture;
 
@@ -29,8 +30,20 @@ void CSMain(uint3 id : SV_DispatchThreadID)
 {
     int i = id.x;
     if (!(i < array_len))return;
-    float rotation_num = i * rotate_scale;
-    float distance_num = sorted_array[i] * distant_scale;
+
+    float rotation_num, distance_num;
+
+    if (type1)
+    {
+        rotation_num = sorted_array[i] * rotate_scale;
+        distance_num = i * distant_scale;
+    }
+    else
+    {
+        rotation_num = i * rotate_scale;
+        distance_num = sorted_array[i] * distant_scale;
+    }
+
     float3 origin_to_point = float3(0, 0, 1);
     float3 axis = float3(0, 1, 0);
     Unity_RotateAboutAxis_Radians_float(axis, float3(0, 0, -1), rotation_num, axis);
