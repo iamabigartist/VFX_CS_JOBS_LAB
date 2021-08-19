@@ -6,11 +6,10 @@ using UnityEngine.VFX;
 
 namespace VFX_CS_JOBS_LAB
 {
-    public class ArrayTo3DCircleCS : ComputeShaderObject<ArrayTo3DCircleCS.ArgsAll>
+    public class ArrayTo3DCircleCS : ComputeShaderObject
     {
-        ComputeBuffer buffer;
 
-        public class ArgsAll
+        public class ArgsAll : ComputeShaderArgs
         {
             public Vector3 origin;
             public float rotate_scale;
@@ -32,25 +31,26 @@ namespace VFX_CS_JOBS_LAB
 
         public ArrayTo3DCircleCS(
             int array_len) :
-            base( new[] { new Vector3( 1024, 1, 1 ) } )
+            base( new[] {new Vector3( 1024, 1, 1 )} )
         {
             _this = Resources.Load<ComputeShader>( "ArrayTo3DCircleCS" );
-            buffer = new ComputeBuffer( array_len, sizeof(int) );
-            data_count_array = new[] { new Vector3( array_len, 1, 1 ) };
+
+            data_count_array = new[] {new Vector3( array_len, 1, 1 )};
         }
 
         public override void init_id()
         {
-            ids.origin = Shader.PropertyToID( "origin" );
-            ids.rotate_scale = Shader.PropertyToID( "rotate_scale" );
-            ids.distant_scale = Shader.PropertyToID( "distant_scale" );
-            ids.array_len = Shader.PropertyToID( "array_len" );
-            ids.sorted_array = Shader.PropertyToID( "sorted_array" );
-            ids.render_texture = Shader.PropertyToID( "render_texture" );
+            ids = (Shader.PropertyToID( "origin" ),
+                   Shader.PropertyToID( "rotate_scale" ),
+                   Shader.PropertyToID( "distant_scale" ),
+                   Shader.PropertyToID( "array_len" ),
+                   Shader.PropertyToID( "sorted_array" ),
+                   Shader.PropertyToID( "render_texture" ));
         }
 
-        public override void bind(ArgsAll args)
+        public override void bind(ShaderArgs _args)
         {
+            var args = _args as ArgsAll;
             _this.SetVector( ids.origin, args.origin );
             _this.SetFloat( ids.rotate_scale, args.rotate_scale );
             _this.SetFloat( ids.distant_scale, args.distant_scale );
@@ -60,10 +60,10 @@ namespace VFX_CS_JOBS_LAB
         }
     }
 
-    public class ParticlePlayer : VFXGraphObject<ParticlePlayer.ArgsAll>
+    public class ParticlePlayer : VFXGraphObject
     {
 
-        public class ArgsAll
+        public class ArgsAll : VFXGraphArgs
         {
             public int Count;
             public RenderTexture RT;
@@ -83,12 +83,13 @@ namespace VFX_CS_JOBS_LAB
 
         public override void init_id()
         {
-            ids.Count = Shader.PropertyToID( "Count" );
-            ids.RT = Shader.PropertyToID( "RT" );
+            ids = (Shader.PropertyToID( "Count" ),
+                   Shader.PropertyToID( "RT" ));
         }
 
-        public override void bind(ArgsAll args)
+        public override void bind(ShaderArgs _args)
         {
+            var args = _args as ArgsAll;
             _this.SetInt( ids.Count, args.Count );
             _this.SetTexture( ids.RT, args.RT );
         }

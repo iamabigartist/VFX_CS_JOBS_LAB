@@ -4,18 +4,18 @@ namespace VFX_CS_JOBS_LAB
     /// <summary>
     ///     Use an array as a input to the compute_shader and output a render_texture to be rendered by the visual_effect.
     /// </summary>
-    public class Array_CS_VFX_Player<TVFXGraphArgs, TComputeShaderArgs>
+    public class Array_CS_VFX_Player
     {
         public RenderTexture RenderTexture { get; }
 
-        public VFXGraphObject<TVFXGraphArgs> VFXGraph { get; }
+        public VFXGraphObject VFXGraph { get; }
 
-        public ComputeShaderObject<TComputeShaderArgs> ComputeShader { get; }
+        public ComputeShaderObject ComputeShader { get; }
 
         public Array_CS_VFX_Player(
             int array_len,
-            VFXGraphObject<TVFXGraphArgs> vfxg,
-            ComputeShaderObject<TComputeShaderArgs> cs)
+            VFXGraphObject vfxg,
+            ComputeShaderObject cs)
         {
             RenderTexture = new RenderTexture(
                 array_len, 1, 0,
@@ -30,7 +30,9 @@ namespace VFX_CS_JOBS_LAB
             ComputeShader.init_id();
         }
 
-        public void Config(TVFXGraphArgs VFXArgs, TComputeShaderArgs ComputeArgs)
+        public void Config(
+            ShaderObject.ShaderArgs VFXArgs,
+            ShaderObject.ShaderArgs ComputeArgs)
         {
             VFXGraph.bind( VFXArgs );
             ComputeShader.bind( ComputeArgs );

@@ -7,25 +7,22 @@ public class VisualisationSystem : MonoBehaviour
     public float DistantScale;
     public float RotateScale;
     int[] array;
+    ComputeBuffer buffer;
     Array_CS_VFX_Player
-        <ParticlePlayer.ArgsAll,
-            ArrayTo3DCircleCS.ArgsAll>
         Player;
 
     // Start is called before the first frame update
     void Start()
     {
         array = new int[Count];
+        buffer = new ComputeBuffer( Count, sizeof(int) );
         for (int i = 0; i < Count; i++)
         {
             array[i] = i;
         }
-
+        buffer.SetData( array );
         Player = new
-            Array_CS_VFX_Player
-            <ParticlePlayer.ArgsAll,
-                ArrayTo3DCircleCS.ArgsAll>(
-                Count,
+            Array_CS_VFX_Player( Count,
                 new ParticlePlayer( this ),
                 new ArrayTo3DCircleCS( Count ) );
 
@@ -42,13 +39,14 @@ public class VisualisationSystem : MonoBehaviour
                 origin = transform.position,
                 render_texture = Player.RenderTexture,
                 rotate_scale = RotateScale,
-                sorted_array = array
+                sorted_array = buffer
             } );
     }
 
     // Update is called once per frame
     void Update()
     {
+        buffer.SetData( array );
         Player.Refresh();
     }
 }
