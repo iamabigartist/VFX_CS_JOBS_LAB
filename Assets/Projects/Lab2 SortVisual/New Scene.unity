@@ -203,7 +203,10 @@ VisualEffect:
         m_Name: RT
         m_Overridden: 1
     m_Bool:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: light
+        m_Overridden: 1
 --- !u!73398921 &69960067
 VFXRenderer:
   m_ObjectHideFlags: 2
@@ -637,11 +640,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa4b4bbf1541594a954075a8b91b5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeedLog10: 3.36
-  DragScaleLog10: 3.79
-  RotateSensitiveLog10: 0.56
+  MoveSpeedLog10: 3
+  DragSpeedLog10: 3.3
+  RotateSensitiveLog10: 0.6
+  ScrollWheelSensitiveLog10: 0.5
   y_flip: 0
   x_flip: 0
+  speed_ratio: 6.2298217
 --- !u!84 &1879434382
 RenderTexture:
   m_ObjectHideFlags: 0
