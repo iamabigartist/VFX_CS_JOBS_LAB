@@ -106,8 +106,11 @@ public class UnityEditorCameraController : MonoBehaviour
     {
         speed_ratio +=
             user_input.speed_change * scroll_sensitive *
-            (speed_ratio < 1f ? 0.1f : 1) *
-            (speed_ratio < 0.1f ? 0.1f : 1);
+            Mathf.Pow( 10, Mathf.CeilToInt( Mathf.Log10( speed_ratio ) ) - 2 );
+        if (speed_ratio < 0)
+        {
+            speed_ratio = 1e-10f;
+        }
 
         target_t.Translate( Time.deltaTime * new Vector3( user_input.move.x, 0, user_input.move.y ), target_t );
 
@@ -160,15 +163,15 @@ public class UnityEditorCameraController : MonoBehaviour
         {
             box_alpha =
                 Mathf.Lerp( box_alpha, 0,
-                    Mathf.Lerp( 0.1f, 0.0001f,
+                    Mathf.Lerp( 0.01f, 0.000001f,
                         Mathf.Pow( box_alpha, 1 / 3f ) ) );
         }
         GUI.color = new Color( 1, 1, 1, box_alpha );
         GUI.Box( new Rect(
                 window_width / 2f - box_width / 2f,
-                window_height / 2f - box_height ,
+                window_height / 2f - box_height,
                 box_width, box_height ),
-            $"{Math.Round( speed_ratio, 3 )}x" );
+            $"{Math.Round( speed_ratio, 6 )}x" );
         GUI.color = Color.white;
     }
 

@@ -17,6 +17,7 @@ namespace VFX_CS_JOBS_LAB
             public float rotate_ratio;
             public bool type1;
             public int array_len;
+            public int texture_row_len;
             public ComputeBuffer sorted_array;
             public RenderTexture render_texture;
         }
@@ -28,6 +29,7 @@ namespace VFX_CS_JOBS_LAB
             int rotate_ratio,
             int type1,
             int array_len,
+            int texture_row_len,
             int sorted_array,
             int render_texture
             )
@@ -35,11 +37,11 @@ namespace VFX_CS_JOBS_LAB
 
         public ArrayTo3DCircleCS(
             int array_len) :
-            base( new[] {new Vector3( 1024, 1, 1 )} )
+            base( new[] { new Vector3( 1024, 1, 1 ) } )
         {
             _this = Resources.Load<ComputeShader>( "ArrayTo3DCircleCS" );
 
-            data_count_array = new[] {new Vector3( array_len, 1, 1 )};
+            data_count_array = new[] { new Vector3( array_len, 1, 1 ) };
         }
 
         public override void init_id()
@@ -50,6 +52,7 @@ namespace VFX_CS_JOBS_LAB
                    Shader.PropertyToID( "rotate_ratio" ),
                    Shader.PropertyToID( "type1" ),
                    Shader.PropertyToID( "array_len" ),
+                   Shader.PropertyToID( "texture_row_len" ),
                    Shader.PropertyToID( "sorted_array" ),
                    Shader.PropertyToID( "render_texture" ));
         }
@@ -63,6 +66,7 @@ namespace VFX_CS_JOBS_LAB
             _this.SetFloat( ids.rotate_ratio, args.rotate_ratio );
             _this.SetBool( ids.type1, args.type1 );
             _this.SetInt( ids.array_len, args.array_len );
+            _this.SetInt( ids.texture_row_len, args.texture_row_len );
             _this.SetBuffer( 0, ids.sorted_array, args.sorted_array );
             _this.SetTexture( 0, ids.render_texture, args.render_texture );
         }
@@ -88,11 +92,15 @@ namespace VFX_CS_JOBS_LAB
         public class ArgsAll : VFXGraphArgs
         {
             public int Count;
+            public int texture_row_len;
+            public int texture_col_len;
             public RenderTexture RT;
         }
 
         (
             int Count,
+            int texture_row_len,
+            int texture_col_len,
             int RT
             )
             ids;
@@ -106,6 +114,8 @@ namespace VFX_CS_JOBS_LAB
         public override void init_id()
         {
             ids = (Shader.PropertyToID( "Count" ),
+                   Shader.PropertyToID( "texture_row_len" ),
+                   Shader.PropertyToID( "texture_col_len" ),
                    Shader.PropertyToID( "RT" ));
         }
 
@@ -113,6 +123,8 @@ namespace VFX_CS_JOBS_LAB
         {
             var args = _args as ArgsAll;
             _this.SetInt( ids.Count, args.Count );
+            _this.SetInt( ids.texture_row_len, args.texture_row_len );
+            _this.SetInt( ids.texture_col_len, args.texture_col_len );
             _this.SetTexture( ids.RT, args.RT );
         }
     }

@@ -1,11 +1,12 @@
 using System.Threading;
-using System.Threading.Tasks;
 using Algorithms.Sorting;
 using UnityEngine;
 using VFX_CS_JOBS_LAB;
 public class VisualisationSystem : MonoBehaviour
 {
-    public RenderTexture[] RenderTextures;
+    public const int RENDER_TEXTURE_ROW_LEN = 1500;
+
+
     public int Count;
     public float DistantScale;
     public float RotateScale;
@@ -13,6 +14,7 @@ public class VisualisationSystem : MonoBehaviour
     public bool ShowType1;
     float[] array;
     ComputeBuffer buffer;
+
     Array_CS_VFX_Player<ParticlePlayer, ArrayTo3DCircleCS>
         Player;
 
@@ -31,10 +33,14 @@ public class VisualisationSystem : MonoBehaviour
 
         buffer.SetData( array );
 
+        int render_texture_col_len =
+            Mathf.CeilToInt( (float)Count / RENDER_TEXTURE_ROW_LEN );
+
         Player = new
             Array_CS_VFX_Player
             <ParticlePlayer,
-                ArrayTo3DCircleCS>( Count,
+                ArrayTo3DCircleCS>(
+                RENDER_TEXTURE_ROW_LEN, render_texture_col_len,
                 new ParticlePlayer( transform.GetChild( 0 ) ),
                 new ArrayTo3DCircleCS( Count ) );
 
@@ -42,11 +48,14 @@ public class VisualisationSystem : MonoBehaviour
             new ParticlePlayer.ArgsAll
             {
                 Count = Count,
+                texture_row_len = RENDER_TEXTURE_ROW_LEN,
+                texture_col_len = render_texture_col_len,
                 RT = Player.RenderTexture
             },
             new ArrayTo3DCircleCS.ArgsAll
             {
                 array_len = Count,
+                texture_row_len = render_texture_col_len,
                 distant_scale = DistantScale,
                 origin = transform.position,
                 render_texture = Player.RenderTexture,
@@ -86,13 +95,16 @@ public class VisualisationSystem : MonoBehaviour
 
         if (GUILayout.Button( "RandomSort" ))
         {
-            Task.Run( () => { array.RandomSort( 10000 ); } );
+            sort_thread.Abort();
+            sort_thread = new Thread( () => { array.RandomSort( (int)1e6 ); } );
+            sort_thread.Start();
+
         }
         if (GUILayout.Button( "BubbleSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.BubbleSort(); } );
-            sort_thread.StartSlow( 40, 0 );
+            sort_thread.StartSlow( 1, (int)1e6 );
             // sort_thread.Start();
             // Task.Run( () => { array.BubbleSort(); } );
         }
@@ -100,13 +112,13 @@ public class VisualisationSystem : MonoBehaviour
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.SelectionSort(); } );
-            sort_thread.StartSlow( 1, 2 );
+            sort_thread.StartSlow( (int)1e5, 0 );
         }
         if (GUILayout.Button( "CombSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.CombSort(); } );
-            sort_thread.StartSlow( 1, 10000000 );
+            sort_thread.StartSlow( 1, (int)1e7 );
         }
         if (GUILayout.Button( "ShellSort" ))
         {
@@ -142,7 +154,7 @@ public class VisualisationSystem : MonoBehaviour
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.QuickSort(); } );
-            sort_thread.StartSlow( 1, 100 );
+            sort_thread.StartSlow( 1, (int)1e4 );
         }
         if (GUILayout.Button( "OddEvenSort" ))
         {

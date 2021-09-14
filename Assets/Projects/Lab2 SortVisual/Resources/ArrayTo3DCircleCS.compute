@@ -5,6 +5,7 @@ float3 origin;
 float rotate_scale;
 float rotate_ratio;
 float distant_scale;
+int texture_row_len;
 int array_len;
 bool type1;
 StructuredBuffer<float> sorted_array;
@@ -31,17 +32,22 @@ void CSMain(uint3 id : SV_DispatchThreadID)
     int i = id.x;
     if (!(i < array_len))return;
 
+    int point_value = sorted_array[i];
+
+    int cur_y = (uint)point_value / (uint)texture_row_len;
+    int cur_x = array_len - cur_y * texture_row_len;
+
     float rotation_num, distance_num;
 
     if (type1)
     {
-        rotation_num = sorted_array[i] * rotate_scale;
+        rotation_num = point_value * rotate_scale;
         distance_num = i * distant_scale;
     }
     else
     {
         rotation_num = i * rotate_scale;
-        distance_num = sorted_array[i] * distant_scale;
+        distance_num = point_value * distant_scale;
     }
 
     float3 origin_to_point = float3(0, 0, 1);
@@ -49,7 +55,8 @@ void CSMain(uint3 id : SV_DispatchThreadID)
     Unity_RotateAboutAxis_Radians_float(axis, float3(0, 0, -1), rotation_num, axis);
     Unity_RotateAboutAxis_Radians_float(origin_to_point, axis, rotation_num * rotate_ratio, origin_to_point);
     origin_to_point = normalize(origin_to_point) * distance_num;
-    render_texture[id.xy] = float4(origin + origin_to_point, 1);
+    render_texture[int2(cur_x, cur_y)] = float4(origin + origin_to_point, 1);
+    //render_texture[int2(i, 0)] = float4(origin + origin_to_point, 1);
 //    render_texture[id.xy] = float4(i, 1, 1, 1);
 //    render_texture[id.x] = float4(origin + origin_to_point, 1);
 //    render_texture[id.x] = float4(i, 1, 1, 1);

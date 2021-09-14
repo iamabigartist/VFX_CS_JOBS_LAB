@@ -176,7 +176,7 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 10000, y: 10000, z: 10000}
+      - m_Value: {x: 1000000, y: 1000000, z: 1000000}
         m_Name: ViewBox_size
         m_Overridden: 1
       - m_Value: {x: 0, y: 0, z: 0}
@@ -188,9 +188,9 @@ VisualEffect:
       m_Array: []
     m_Int:
       m_Array:
-      - m_Value: 10000
+      - m_Value: 0
         m_Name: Count
-        m_Overridden: 1
+        m_Overridden: 0
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
@@ -397,9 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fbb0edb79a474645a1f3acd18f293e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RenderTextures: []
   Count: 15000
-  DistantScale: 0.5
+  DistantScale: 1
   RotateScale: 0.0055
   RotateRatio: 22
   ShowType1: 0
@@ -727,7 +726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fbb0edb79a474645a1f3acd18f293e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RenderTextures: []
   Count: 15000
   DistantScale: 0.5
   RotateScale: 0.0055

@@ -8,37 +8,28 @@ namespace VFX_CS_JOBS_LAB
         where TVFXGraphObject : VFXGraphObject
         where TComputeShaderObject : ComputeShaderObject
     {
-        RenderTexture[] t;
+
         public RenderTexture RenderTexture { get; }
+        public int render_texture_col_len;
 
         public TVFXGraphObject VFXGraph { get; }
 
         public TComputeShaderObject ComputeShader { get; }
 
         public Array_CS_VFX_Player(
-            int array_len,
+            int render_texture_row_len,
+            int render_texture_col_len,
             TVFXGraphObject vfxg,
             TComputeShaderObject cs)
         {
             RenderTexture = new RenderTexture(
-                array_len, 1, 0,
+                render_texture_row_len,
+                render_texture_col_len, 0,
                 RenderTextureFormat.ARGBFloat,
                 RenderTextureReadWrite.Linear )
             {
                 enableRandomWrite = true
             };
-
-            t = new RenderTexture[100];
-            for (int i = 0; i < 100; i++)
-            {
-                t[i] = new RenderTexture(
-                    array_len, 1, 0,
-                    RenderTextureFormat.ARGBFloat,
-                    RenderTextureReadWrite.Linear )
-                {
-                    enableRandomWrite = true
-                };
-            }
             VFXGraph = vfxg;
             VFXGraph.init_id();
             ComputeShader = cs;
