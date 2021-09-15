@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.VFX;
 // ReSharper disable UnusedMemberInSuper.Global
@@ -32,9 +31,9 @@ public abstract class ComputeShaderObject : ShaderObject
         var num_thread = num_threads_array[kernel];
         var data_count = data_count_array[kernel];
         return new Vector3Int(
-            Mathf.CeilToInt( num_thread.x / data_count.x ),
-            Mathf.CeilToInt( num_thread.y / data_count.y ),
-            Mathf.CeilToInt( num_thread.z / data_count.z ) );
+            Mathf.CeilToInt( data_count.x / num_thread.x ),
+            Mathf.CeilToInt( data_count.y / num_thread.y ),
+            Mathf.CeilToInt( data_count.z / num_thread.z ) );
     }
     public void Dispatch(int kernel)
     {

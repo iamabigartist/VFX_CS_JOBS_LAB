@@ -18,6 +18,7 @@ namespace VFX_CS_JOBS_LAB
             public bool type1;
             public int array_len;
             public ComputeBuffer sorted_array;
+            public ComputeBuffer test_buffer;
             public RenderTexture render_texture;
         }
 
@@ -29,17 +30,18 @@ namespace VFX_CS_JOBS_LAB
             int type1,
             int array_len,
             int sorted_array,
+            int test_buffer,
             int render_texture
             )
             ids;
 
         public ArrayTo3DCircleCS(
             int array_len) :
-            base( new[] {new Vector3( 1024, 1, 1 )} )
+            base( new[] { new Vector3( 1024, 1, 1 ) } )
         {
             _this = Resources.Load<ComputeShader>( "ArrayTo3DCircleCS" );
 
-            data_count_array = new[] {new Vector3( array_len, 1, 1 )};
+            data_count_array = new[] { new Vector3( array_len, 1, 1 ) };
         }
 
         public override void init_id()
@@ -51,6 +53,7 @@ namespace VFX_CS_JOBS_LAB
                    Shader.PropertyToID( "type1" ),
                    Shader.PropertyToID( "array_len" ),
                    Shader.PropertyToID( "sorted_array" ),
+                   Shader.PropertyToID( "test_buffer" ),
                    Shader.PropertyToID( "render_texture" ));
         }
 
@@ -64,6 +67,7 @@ namespace VFX_CS_JOBS_LAB
             _this.SetBool( ids.type1, args.type1 );
             _this.SetInt( ids.array_len, args.array_len );
             _this.SetBuffer( 0, ids.sorted_array, args.sorted_array );
+            _this.SetBuffer( 0, ids.test_buffer, args.test_buffer );
             _this.SetTexture( 0, ids.render_texture, args.render_texture );
         }
 

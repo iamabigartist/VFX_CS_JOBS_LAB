@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Algorithms.Sorting;
@@ -12,7 +13,9 @@ public class VisualisationSystem : MonoBehaviour
     public float RotateRatio;
     public bool ShowType1;
     float[] array;
+    Vector4[] test_array;
     ComputeBuffer buffer;
+    ComputeBuffer test_buffer;
     Array_CS_VFX_Player<ParticlePlayer, ArrayTo3DCircleCS>
         Player;
 
@@ -23,7 +26,9 @@ public class VisualisationSystem : MonoBehaviour
     void Start()
     {
         array = new float[Count];
+        test_array = new Vector4[Count];
         buffer = new ComputeBuffer( Count, sizeof(float) );
+        test_buffer = new ComputeBuffer( Count, 4 * sizeof(float) );
         for (int i = 0; i < Count; i++)
         {
             array[i] = i;
@@ -52,7 +57,8 @@ public class VisualisationSystem : MonoBehaviour
                 render_texture = Player.RenderTexture,
                 rotate_scale = RotateScale,
                 type1 = ShowType1,
-                sorted_array = buffer
+                sorted_array = buffer,
+                test_buffer = test_buffer
             } );
         sort_thread = new Thread( () => { } );
         sort_thread.Start();
@@ -64,11 +70,14 @@ public class VisualisationSystem : MonoBehaviour
         buffer.SetData( array );
         Player.ComputeShader.bind_refresh( transform.position, RotateScale, DistantScale, RotateRatio, ShowType1 );
         Player.Refresh();
+
+        test_buffer.GetData( test_array );
     }
 
     void OnDestroy()
     {
         buffer.Release();
+        test_buffer.Release();
     }
 
     void OnGUI()
@@ -161,9 +170,20 @@ public class VisualisationSystem : MonoBehaviour
             // GUILayout.Box( $"ThreadState:{sort_thread.ThreadState}" );
         }
 
+        a = GUILayout.TextField( a );
+
+        try
+        {
+            GUILayout.Box( $"{test_array[Convert.ToInt32( a )]}" );
+        }
+        catch (Exception e)
+        {
+            GUILayout.Box( e.ToString() );
+        }
+
     }
 
-
+    string a = "1";
 
 
 }
