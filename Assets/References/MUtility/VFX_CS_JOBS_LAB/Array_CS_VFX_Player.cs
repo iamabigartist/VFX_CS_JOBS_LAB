@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 namespace VFX_CS_JOBS_LAB
 {
     /// <summary>
@@ -26,7 +25,7 @@ namespace VFX_CS_JOBS_LAB
                 RenderTextureFormat.ARGBFloat,
                 RenderTextureReadWrite.Linear )
             {
-                enableRandomWrite = true,
+                enableRandomWrite = true
             };
 
             t = new RenderTexture[100];

@@ -1,9 +1,9 @@
 #include <UnityCG.cginc>
 #pragma kernel CSMain
+const float C = 0.57721566490153286060651209;
 
 float3 origin;
 float rotate_scale;
-float rotate_ratio;
 float distant_scale;
 int array_len;
 bool type1;
@@ -26,6 +26,12 @@ void Unity_RotateAboutAxis_Radians_float(float3 In, float3 Axis, float Rotation,
     Out = mul(rot_mat, In);
 }
 
+
+float harmonic_progression_approximation(int i)
+{
+    return log(i) + C;
+}
+
 [numthreads(1024,1,1)]
 void CSMain(uint3 id : SV_DispatchThreadID)
 {
@@ -38,24 +44,21 @@ void CSMain(uint3 id : SV_DispatchThreadID)
 
     if (type1)
     {
-        rotation_num = point_value * rotate_scale;
         distance_num = i * distant_scale;
+        rotation_num = point_value * rotate_scale / distance_num;
     }
     else
     {
-        rotation_num = i * rotate_scale;
         distance_num = point_value * distant_scale;
+        rotation_num = rotate_scale / distant_scale * harmonic_progression_approximation(i);
     }
 
     float3 origin_to_point = float3(0, 0, 1);
     float3 axis = float3(0, 1, 0);
     Unity_RotateAboutAxis_Radians_float(axis, float3(0, 0, -1), rotation_num, axis);
-    Unity_RotateAboutAxis_Radians_float(origin_to_point, axis, rotation_num * rotate_ratio, origin_to_point);
+    Unity_RotateAboutAxis_Radians_float(origin_to_point, axis, rotation_num * 32, origin_to_point);
     origin_to_point = normalize(origin_to_point) * distance_num;
     render_texture[uint2(point_value, 0)] = float4(origin + origin_to_point, 1);
     // test_buffer[i] = float4(origin + origin_to_point, 1);
     // test_buffer[i] = float4(i, 0, 0, 0);
-//    render_texture[id.xy] = float4(i, 1, 1, 1);
-//    render_texture[id.x] = float4(origin + origin_to_point, 1);
-//    render_texture[id.x] = float4(i, 1, 1, 1);
 }
