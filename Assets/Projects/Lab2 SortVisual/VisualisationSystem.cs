@@ -86,7 +86,7 @@ public class VisualisationSystem : MonoBehaviour
             (sort_thread.ThreadState & ThreadState.Stopped) > 0 ||
             (sort_thread.ThreadState & ThreadState.Unstarted) > 0;
 
-        ShowType1 = GUILayout.Toggle( ShowType1, "ShowType2" );
+        // ShowType1 = GUILayout.Toggle( ShowType1, "ShowType2" );
 
         GUI.enabled = can_start_new;
 
@@ -95,13 +95,13 @@ public class VisualisationSystem : MonoBehaviour
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.RandomSort( 10000 ); } );
-            sort_thread.Start();
+            sort_thread.StartSlow( 10000, 0 );
         }
         if (GUILayout.Button( "BubbleSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.BubbleSort(); } );
-            sort_thread.StartSlow( 1, 1000 );
+            sort_thread.StartSlow( 1, 10 );
             // sort_thread.Start();
             // Task.Run( () => { array.BubbleSort(); } );
         }
@@ -109,55 +109,55 @@ public class VisualisationSystem : MonoBehaviour
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.SelectionSort(); } );
-            sort_thread.StartSlow( 1, 1 );
+            sort_thread.StartSlow( 5, 5 );
         }
         if (GUILayout.Button( "CombSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.CombSort(); } );
-            sort_thread.StartSlow( 1, 1000000 );
+            sort_thread.StartSlow( 1, 3000000 );
         }
         if (GUILayout.Button( "ShellSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.ShellSort(); } );
-            sort_thread.StartSlow( 5, 1 );
+            sort_thread.StartSlow( 10, 5 );
         }
         if (GUILayout.Button( "CycleSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.CycleSort(); } );
-            sort_thread.StartSlow( 100000, 1 );
+            sort_thread.StartSlow( 100000, 5 );
         }
         if (GUILayout.Button( "GnomeSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.GnomeSort(); } );
-            sort_thread.StartSlow( 100, 1 );
+            sort_thread.StartSlow( 100, 5 );
         }
         if (GUILayout.Button( "HeapSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.HeapSort(); } );
-            sort_thread.StartSlow( 1, 100 );
+            sort_thread.StartSlow( 1, 1000 );
         }
         if (GUILayout.Button( "InsertionSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.InsertionSort(); } );
-            sort_thread.StartSlow( 100, 1 );
+            sort_thread.StartSlow( 200, 5 );
         }
         if (GUILayout.Button( "QuickSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.QuickSort(); } );
-            sort_thread.StartSlow( 1, 1000000 );
+            sort_thread.StartSlow( 1, 500000 );
         }
         if (GUILayout.Button( "OddEvenSort" ))
         {
             sort_thread.Abort();
             sort_thread = new Thread( () => { array.OddEvenSort(); } );
-            sort_thread.StartSlow( 100, 1 );
+            sort_thread.StartSlow( 300, 5 );
         }
         if (!can_start_new)
         {
